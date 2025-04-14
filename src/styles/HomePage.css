@@ -1,0 +1,235 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(to right, #0047AB, #008CBA); /* Blue Gradient */
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li button {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav ul li button:hover {
+  color: yellow;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #e0e0e0;
+}
+
+.hero h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 100%;
+  max-width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  background: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background: #005f87;
+}
+
+/* Popular Destinations */
+.destinations {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.destinations h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.destination-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.destination-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.destination-card h4 {
+  font-size: 20px;
+  color: #008CBA;
+}
+
+.destination-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Map Section */
+.map-section {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.map-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Chatbot Widget (Launcher Button) */
+.rcw-launcher {
+  position: fixed !important;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999 !important;
+  background-color: #35cce6;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px 1px #b5b5b5;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  animation-delay: 0;
+  animation-duration: .5s;
+  animation-name: slide-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .search-box input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .destination-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .destination-card {
+    width: 80%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .search-box input {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .destination-card {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+}
